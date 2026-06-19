@@ -1,0 +1,119 @@
+/* ── SIDEBAR ── */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -280px;
+  width: 280px;
+  height: 100vh;
+  background-color: #fff0f6;
+  box-shadow: -6px 0 30px rgba(232, 98, 154, 0.18);
+  padding: 2rem 1.5rem;
+  transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  border-left: 2px solid #f7b8d3;
+}
+
+.sidebar.open {
+  right: 0;
+}
+
+.close-btn {
+  align-self: flex-end;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #c94b7b;
+  font-size: 1.3rem;
+  transition: transform 0.25s ease;
+  padding: 0.2rem;
+}
+
+.close-btn:hover {
+  transform: rotate(90deg);
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding-left: 0.5rem;
+  margin: 1.5rem 0;
+  list-style: none;
+}
+
+.sidebar-nav li {
+  list-style: none;
+}
+
+.sidebar-nav li::before {
+  content: "✿";
+  color: #e8629a;
+  font-size: 1.1em;
+  margin-right: 0.6em;
+}
+
+.sidebar-nav a {
+  color: #c94b7b;
+  text-decoration: none;
+  transition: color 0.2s ease, letter-spacing 0.2s ease;
+  letter-spacing: 0.06em;
+}
+
+.sidebar-nav a:hover {
+  color: #8fae88;
+  letter-spacing: 0.1em;
+}
+
+.toggle {
+  color: #c94b7b;
+  background: none;
+  border: none;
+}
+
+/* Decorative checkerboard strip at top of sidebar */
+.sidebar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background-image: repeating-conic-gradient(#f7b8d3 0% 25%, transparent 0% 50%);
+  background-size: 8px 8px;
+}
+
+.navbar {
+  z-index: 1000;
+}
+
+/* ── DARK MODE ── */
+.darkmode .sidebar {
+  background-color: #251828;
+  border-left-color: #6b3054;
+}
+
+.darkmode .sidebar::before {
+  background-image: repeating-conic-gradient(#6b3054 0% 25%, transparent 0% 50%);
+}
+
+.darkmode .close-btn {
+  color: #f4b8d3;
+}
+
+.darkmode .sidebar-nav a {
+  color: #f4b8d3 !important;
+}
+
+.darkmode .toggle {
+  color: #f4b8d3;
+}
+
+@media (min-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+}
