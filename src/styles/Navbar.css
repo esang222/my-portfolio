@@ -1,3 +1,67 @@
+/* ── NAVBAR BAR ── */
+.navbar {
+  z-index: 1000;
+  height: 78px;
+  background-color: var(--nav-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 3px solid var(--text-main);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.logo-title {
+  font-family: 'Fredoka One', cursive;
+  font-size: 0.95rem;
+  line-height: 1.15;
+  color: var(--text-main);
+  letter-spacing: 0.03em;
+}
+
+.nav-link {
+  color: var(--text-main) !important;
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  position: relative;
+  padding-bottom: 4px;
+  transition: color 0.2s ease;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #D66D92;
+  transition: width 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #D66D92 !important;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.dark-mode-toggle,
+.toggle {
+  color: var(--text-main);
+  background: none;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.dark-mode-toggle:hover,
+.toggle:hover {
+  color: #D66D92;
+  transform: scale(1.08);
+}
+
 /* ── SIDEBAR ── */
 .sidebar {
   position: fixed;
@@ -5,14 +69,18 @@
   right: -280px;
   width: 280px;
   height: 100vh;
-  background-color: #fff0f6;
+  background-color: var(--sidebar-bg);
   box-shadow: -6px 0 30px rgba(232, 98, 154, 0.18);
   padding: 2rem 1.5rem;
-  transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s ease;
   z-index: 2000;
   display: flex;
   flex-direction: column;
   border-left: 2px solid #f7b8d3;
+}
+
+body.darkmode .sidebar {
+  border-left-color: #6b3054;
 }
 
 .sidebar.open {
@@ -28,6 +96,10 @@
   font-size: 1.3rem;
   transition: transform 0.25s ease;
   padding: 0.2rem;
+}
+
+body.darkmode .close-btn {
+  color: #f4b8d3;
 }
 
 .close-btn:hover {
@@ -63,15 +135,17 @@
   letter-spacing: 0.06em;
 }
 
+body.darkmode .sidebar-nav a {
+  color: #f4b8d3;
+}
+
 .sidebar-nav a:hover {
   color: #8fae88;
   letter-spacing: 0.1em;
 }
 
-.toggle {
-  color: #c94b7b;
-  background: none;
-  border: none;
+body.darkmode .sidebar-nav a:hover {
+  color: #a8d19a;
 }
 
 /* Decorative checkerboard strip at top of sidebar */
@@ -86,30 +160,8 @@
   background-size: 8px 8px;
 }
 
-.navbar {
-  z-index: 1000;
-}
-
-/* ── DARK MODE ── */
-.darkmode .sidebar {
-  background-color: #251828;
-  border-left-color: #6b3054;
-}
-
-.darkmode .sidebar::before {
+body.darkmode .sidebar::before {
   background-image: repeating-conic-gradient(#6b3054 0% 25%, transparent 0% 50%);
-}
-
-.darkmode .close-btn {
-  color: #f4b8d3;
-}
-
-.darkmode .sidebar-nav a {
-  color: #f4b8d3 !important;
-}
-
-.darkmode .toggle {
-  color: #f4b8d3;
 }
 
 @media (min-width: 768px) {
