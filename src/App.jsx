@@ -254,56 +254,7 @@ function App() {
             </div>
           </div>
         </div>
-      </section>
-
-      {/* ── KUDOS / TESTIMONIALS ── */}
-      <section id="kudos" className="mb-5 pb-5">
-        <h2 className="text-center mb-5" style={{ fontSize: "3rem" }}>Words from the Team</h2>
-        <div className="row g-4">
-          
-          <div className="col-12 col-md-6">
-            <div className="sticker-card p-4 p-md-5 h-100 bg-white position-relative">
-              <i className="fa-solid fa-quote-left position-absolute top-0 start-0 mt-4 ms-4" style={{ fontSize: "2rem", color: "var(--pink-pastel)", opacity: "0.5" }}></i>
-              <p className="fw-bold text-center mt-3" style={{ fontSize: "1.1rem", position: "relative", zIndex: 1 }}>
-                "Jessa is a powerhouse when it comes to system development. We co-developed several projects together, and her ability to bridge the gap between backend logic and UI design is unmatched."
-              </p>
-              <div className="text-center mt-4">
-                <p className="mb-0 fw-bold font-monospace text-uppercase" style={{ color: "var(--text-main)" }}>— P. Maniclang</p>
-                <p className="mb-0 accent-text" style={{ fontSize: "0.9rem" }}>Co-Developer & Classmate</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="col-12 col-md-6">
-            <div className="sticker-card p-4 p-md-5 h-100 bg-white position-relative">
-              <i className="fa-solid fa-quote-left position-absolute top-0 start-0 mt-4 ms-4" style={{ fontSize: "2rem", color: "var(--yellow-butter)", opacity: "0.5" }}></i>
-              <p className="fw-bold text-center mt-3" style={{ fontSize: "1.1rem", position: "relative", zIndex: 1 }}>
-                "Her work on the Internal Auditing System during her deployment phase vastly improved our workflow. She's proactive, highly technical, and a great addition to any IT department."
-              </p>
-              <div className="text-center mt-4">
-                <p className="mb-0 fw-bold font-monospace text-uppercase" style={{ color: "var(--text-main)" }}>— Project Lead</p>
-                <p className="mb-0 accent-text" style={{ fontSize: "0.9rem" }}>Nidec Philippines Corp.</p>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      {/* ── AFK (AWAY FROM KEYBOARD) SECTION ── */}
-      <section id="afk" className="mb-5 pb-5 text-center">
-        <h2 className="mb-2" style={{ fontSize: "3rem" }}>AFK (Away From Keyboard)</h2>
-        <p className="mb-4" style={{ fontSize: "1.1rem" }}>Because I can't just stare at VS Code all day.</p>
-        
-        <div className="d-flex justify-content-center flex-wrap gap-3">
-          <div className="skill-tag" style={{ background: "white", transform: "rotate(-2deg)" }}><i className="fa-solid fa-gamepad me-2"></i> Carrying in Valorant & Apex</div>
-          <div className="skill-tag" style={{ background: "var(--pink-pastel)", transform: "rotate(3deg)" }}><i className="fa-solid fa-skull me-2"></i> Theorizing about One Piece (Imu reveal!)</div>
-          <div className="skill-tag" style={{ background: "var(--yellow-butter)", transform: "rotate(-1deg)" }}><i className="fa-solid fa-headphones me-2"></i> Vibing to Shoegaze & Dream-pop</div>
-          <div className="skill-tag" style={{ background: "var(--green-sage)", transform: "rotate(2deg)" }}><i className="fa-solid fa-cat me-2"></i> Hanging out with my two cats</div>
-          <div className="skill-tag" style={{ background: "white", transform: "rotate(-3deg)" }}><i className="fa-solid fa-language me-2"></i> Practicing reading Hangul</div>
-          <div className="skill-tag" style={{ background: "var(--pink-pastel)", transform: "rotate(1deg)" }}><i className="fa-solid fa-computer me-2"></i> Modding the absolute chaos out of Sims 4</div>
-        </div>
-      </section>
+      </section>      
 
       {/* ── LET'S CONNECT (CONTACT SECTION) ── */}
       <section id="contact" className="mb-4">
@@ -329,19 +280,6 @@ function App() {
         </div>
       </section>
 
-      {/* ── FOOTER ── */}
-      <footer 
-        className="text-center fw-bold p-4 bg-white"
-        style={{ 
-          borderTop: "3px solid var(--text-main)", 
-          borderRadius: "16px 16px 0 0", 
-          boxShadow: "0px -4px 0px var(--text-main)"
-        }}
-      >
-        <p className="mb-0" style={{ color: "var(--text-main)" }}>
-          Made with <i className="fa-solid fa-heart" style={{ color: "#D66D92" }}></i> by Jessa Cariñaga · © {new Date().getFullYear()}
-        </p>
-      </footer>
 
     </div>
   );
