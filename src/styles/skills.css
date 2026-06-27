@@ -1,36 +1,28 @@
 .skills-grid {
   display: grid;
-
   grid-template-columns: repeat(2, 1fr);
-
   gap: 30px;
 }
 
 .skill-card {
   padding: 35px;
-
   transition: 0.3s;
 }
 
 .skill-card:hover {
   transform: translateY(-8px);
-
   border: 1px solid var(--primary);
 }
 
 .skill-header {
   display: flex;
-
   align-items: center;
-
   gap: 15px;
-
   margin-bottom: 30px;
 }
 
 .skill-header i {
   font-size: 2rem;
-
   color: var(--primary);
 }
 
@@ -40,31 +32,22 @@
 
 .tech-list {
   display: flex;
-
   flex-wrap: wrap;
-
   gap: 15px;
 }
 
 .tech-list span {
   padding: 10px 18px;
-
   background: rgba(255, 255, 255, 0.05);
-
   border: 1px solid var(--border);
-
   border-radius: 999px;
-
   transition: 0.3s;
-
   font-size: 0.95rem;
 }
 
 .tech-list span:hover {
   background: var(--primary);
-
   border-color: var(--primary);
-
   color: white;
 }
 

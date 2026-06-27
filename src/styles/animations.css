@@ -1,6 +1,4 @@
-/* ===========================
-   Fade Up
-=========================== */
+
 
 .fade-up {
   animation: fadeUp 0.8s ease forwards;
@@ -18,9 +16,7 @@
   }
 }
 
-/* ===========================
-   Fade Down
-=========================== */
+
 
 .fade-down {
   animation: fadeDown 0.8s ease forwards;
@@ -38,9 +34,7 @@
   }
 }
 
-/* ===========================
-   Fade Left
-=========================== */
+
 
 .fade-left {
   animation: fadeLeft 0.8s ease forwards;
@@ -58,9 +52,7 @@
   }
 }
 
-/* ===========================
-   Fade Right
-=========================== */
+
 
 .fade-right {
   animation: fadeRight 0.8s ease forwards;
@@ -78,9 +70,7 @@
   }
 }
 
-/* ===========================
-   Scale In
-=========================== */
+
 
 .scale-in {
   animation: scaleIn 0.7s ease forwards;
@@ -98,9 +88,7 @@
   }
 }
 
-/* ===========================
-   Floating
-=========================== */
+
 
 .float {
   animation: floating 5s ease-in-out infinite;
@@ -120,9 +108,6 @@
   }
 }
 
-/* ===========================
-   Pulse
-=========================== */
 
 .pulse {
   animation: pulse 2s infinite;
@@ -142,9 +127,6 @@
   }
 }
 
-/* ===========================
-   Rotate
-=========================== */
 
 .rotate {
   animation: rotate 10s linear infinite;
