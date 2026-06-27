@@ -10,7 +10,7 @@ import "./styles/global.css";
 import "./styles/utilities.css";
 import "./styles/animations.css";
 
-import "./styles/navbar.css";
+import "./styles/Navbar.css";
 import "./styles/hero.css";
 import "./styles/about.css";
 import "./styles/skills.css";
