@@ -1,0 +1,69 @@
+.section-title {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.section-title span {
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.section-title h2 {
+  margin-top: 12px;
+  font-size: 2.7rem;
+  font-weight: 700;
+}
+
+.section-title p {
+  margin: 20px auto 0;
+  max-width: 700px;
+}
+
+.primary-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 34px;
+  border-radius: 999px;
+  background: var(--primary);
+  color: white;
+  transition: var(--transition);
+  font-weight: 600;
+}
+
+.primary-btn:hover {
+  transform: translateY(-4px);
+  color: white;
+  box-shadow: 0 10px 30px rgba(56, 189, 248, 0.35);
+}
+
+.secondary-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 34px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  color: white;
+  transition: var(--transition);
+}
+
+.secondary-btn:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(14px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  color: transparent;
+}

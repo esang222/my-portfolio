@@ -1,36 +1,115 @@
-import React from 'react';
+import "../styles/about.css";
 
-const About = () => {
+function About() {
   return (
-    <section id="about" className="section-padding">
-      <div className="container">
-        <div className="row justify-content-between align-items-center g-5">
-          <div className="col-lg-5">
-            <h2 className="fw-bolder mb-4 display-6">Behind the <span className="text-gradient">Code.</span></h2>
-            <p className="text-muted mb-4 line-height-lg fs-5">
-              I am a detail-oriented Information Technology graduate combining technical precision with modern web technologies[cite: 1]. My background bridges the gap between complex administrative data workflows and seamless software development.
-            </p>
-            <div className="d-flex gap-3 mb-4">
-               <a href="#" className="btn btn-light rounded-circle shadow-sm p-3"><i className="bi bi-github fs-5"></i></a>
-               <a href="#" className="btn btn-light rounded-circle shadow-sm p-3"><i className="bi bi-linkedin fs-5"></i></a>
-               <a href="mailto:carinagajessa18@gmail.com" className="btn btn-light rounded-circle shadow-sm p-3"><i className="bi bi-envelope-fill fs-5"></i></a>
+    <section id="about">
+      <div className="container-custom">
+        <div className="section-title">
+          <span>About Me</span>
+
+          <h2>
+            Turning Ideas Into
+            <span className="gradient-text"> Digital Solutions</span>
+          </h2>
+
+          <p>
+            Passionate about creating modern web applications, solving
+            real-world problems, and continuously learning new technologies.
+          </p>
+        </div>
+
+        <div className="about-grid">
+          <div className="about-info glass">
+            <div className="info-item">
+              <i className="bi bi-person-circle"></i>
+
+              <div>
+                <h5>Name</h5>
+
+                <p>Jessa Cariñaga</p>
+              </div>
+            </div>
+
+            <div className="info-item">
+              <i className="bi bi-mortarboard-fill"></i>
+
+              <div>
+                <h5>Education</h5>
+
+                <p>BS Information Technology</p>
+              </div>
+            </div>
+
+            <div className="info-item">
+              <i className="bi bi-geo-alt-fill"></i>
+
+              <div>
+                <h5>Location</h5>
+
+                <p>Santa Rosa City, Laguna</p>
+              </div>
+            </div>
+
+            <div className="info-item">
+              <i className="bi bi-briefcase-fill"></i>
+
+              <div>
+                <h5>Status</h5>
+
+                <p>Open to Work</p>
+              </div>
             </div>
           </div>
-          <div className="col-lg-6">
-            <div className="row g-4">
-              <div className="col-sm-6">
-                <div className="premium-card p-4">
-                  <i className="bi bi-mortarboard fs-2 text-gradient mb-3 d-block"></i>
-                  <h5 className="fw-bold">Education</h5>
-                  <p className="text-muted small mb-0">BS Information Technology<br/>University of Cabuyao (2026)[cite: 1]</p>
-                </div>
+
+          <div className="about-content">
+            <h3>
+              Building practical, scalable, and user-focused web applications.
+            </h3>
+
+            <p>
+              I recently graduated with a Bachelor of Science in Information
+              Technology and enjoy developing responsive web applications that
+              combine clean user interfaces with reliable backend functionality.
+              Throughout my internship and academic projects, I gained hands-on
+              experience building full-stack systems, designing databases,
+              integrating APIs, and improving user experiences.
+            </p>
+
+            <p>
+              Beyond development, I value writing clean code, learning modern
+              technologies, collaborating with teams, and continuously improving
+              my skills to build software that delivers meaningful solutions.
+            </p>
+
+            <div className="about-highlights">
+              <div>
+                <i className="bi bi-check-circle-fill"></i>
+                Responsive Web Development
               </div>
-              <div className="col-sm-6">
-                <div className="premium-card p-4">
-                  <i className="bi bi-award fs-2 text-gradient mb-3 d-block"></i>
-                  <h5 className="fw-bold">Certifications</h5>
-                  <p className="text-muted small mb-0">CISCO NetAcad JavaScript[cite: 1]<br/>Google Analytics Certified[cite: 1]</p>
-                </div>
+
+              <div>
+                <i className="bi bi-check-circle-fill"></i>
+                Full Stack Development
+              </div>
+
+              <div>
+                <i className="bi bi-check-circle-fill"></i>
+                Database Design
+              </div>
+
+              <div>
+                <i className="bi bi-check-circle-fill"></i>
+                REST API Integration
+              </div>
+
+              <div>
+                <i className="bi bi-check-circle-fill"></i>
+                UI/UX Design
+              </div>
+
+              <div>
+                <i className="bi bi-check-circle-fill"></i>
+                Data Management
               </div>
             </div>
           </div>
@@ -38,6 +117,6 @@ const About = () => {
       </div>
     </section>
   );
-};
+}
 
 export default About;

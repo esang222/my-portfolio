@@ -1,25 +1,44 @@
-import React from 'react';
+import "../styles/contact.css";
 
-const Contact = () => {
+function Contact() {
   return (
-    <section id="contact" className="section-padding">
-      <div className="container">
-        <div className="premium-card p-5 p-md-5 text-center shadow-lg" style={{ background: 'linear-gradient(135deg, #1f2937, #111827)', color: 'white' }}>
-          <div className="row justify-content-center">
-            <div className="col-lg-8 py-5">
-              <h2 className="display-5 fw-bolder mb-4">Ready to collaborate?</h2>
-              <p className="lead text-white-50 mb-5">
-                I am actively looking for full-time opportunities where I can contribute my web development and database management skills.
-              </p>
-              <a href="mailto:carinagajessa18@gmail.com" className="btn btn-light btn-lg rounded-pill px-5 py-3 fw-bold shadow">
-                Send an Email <i className="bi bi-send ms-2"></i>
-              </a>
-            </div>
+    <section id="contact">
+      <div className="container-custom">
+        <div className="contact-card glass">
+          <h2>Let's Build Something Together</h2>
+
+          <p>
+            I'm currently open to entry-level opportunities and
+            freelance projects. Feel free to reach out if you'd like to
+            collaborate or simply have a conversation.
+          </p>
+
+          <div className="contact-links">
+            <a href="mailto:carinagajessa18@gmail.com" className="primary-btn">
+              <i className="bi bi-envelope-fill"></i>
+              Email Me
+            </a>
+
+            <a
+              href="https://github.com/esang222"
+              target="_blank"
+              className="secondary-btn">
+              <i className="bi bi-github"></i>
+              GitHub
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/jessa-carinaga/"
+              target="_blank"
+              className="secondary-btn">
+              <i className="bi bi-linkedin"></i>
+              LinkedIn
+            </a>
           </div>
         </div>
       </div>
     </section>
   );
-};
+}
 
 export default Contact;

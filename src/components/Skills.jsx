@@ -1,42 +1,89 @@
-import React from 'react';
+import "../styles/skills.css";
 
-const Skills = () => {
-  const categories = [
-    { title: "Frontend", icon: "bi-window-sidebar", skills: ["React.js", "Vue.js", "JavaScript", "HTML5/CSS", "Bootstrap", "Figma"] },
-    { title: "Backend", icon: "bi-server", skills: ["PHP", "Node.js", "Express.js", "REST APIs"] },
-    { title: "Database & Tools", icon: "bi-database", skills: ["MySQL", "MongoDB", "Git/GitHub", "Postman", "XAMPP"] }
-  ];
-
+function Skills() {
   return (
-    <section id="skills" className="py-5">
-      <div className="container">
-        <div className="text-center mb-5">
-           <h2 className="fw-bolder display-6">Technical <span className="text-gradient">Arsenal.</span></h2>
+    <section id="skills">
+      <div className="container-custom">
+        <div className="section-title">
+          <span>Technical Skills</span>
+
+          <h2>Technologies I Use</h2>
+
+          <p>
+            Technologies I've used throughout my academic projects, internship,
+            and personal development journey.
+          </p>
         </div>
-        <div className="row g-4">
-          {categories.map((cat, idx) => (
-            <div className="col-lg-4" key={idx}>
-              <div className="premium-card p-5">
-                <div className="d-flex align-items-center gap-3 mb-4">
-                  <div className="p-3 bg-light rounded-circle text-dark">
-                    <i className={`bi ${cat.icon} fs-4`}></i>
-                  </div>
-                  <h4 className="fw-bold mb-0">{cat.title}</h4>
-                </div>
-                <div className="d-flex flex-wrap gap-2">
-                  {cat.skills.map((skill, i) => (
-                    <span key={i} className="badge bg-white text-dark border shadow-sm py-2 px-3 fw-medium rounded-pill">
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-              </div>
+
+        <div className="skills-grid">
+          <div className="skill-card glass">
+            <div className="skill-header">
+              <i className="bi bi-window"></i>
+
+              <h3>Frontend</h3>
             </div>
-          ))}
+
+            <div className="tech-list">
+              <span>HTML5</span>
+              <span>CSS3</span>
+              <span>JavaScript</span>
+              <span>React.js</span>
+              <span>Bootstrap</span>
+              <span>Vue.js</span>
+            </div>
+          </div>
+
+          <div className="skill-card glass">
+            <div className="skill-header">
+              <i className="bi bi-server"></i>
+
+              <h3>Backend</h3>
+            </div>
+
+            <div className="tech-list">
+              <span>Node.js</span>
+              <span>Express.js</span>
+              <span>PHP</span>
+              <span>REST APIs</span>
+            </div>
+          </div>
+
+          <div className="skill-card glass">
+            <div className="skill-header">
+              <i className="bi bi-database"></i>
+
+              <h3>Database</h3>
+            </div>
+
+            <div className="tech-list">
+              <span>MySQL</span>
+              <span>MongoDB</span>
+            </div>
+          </div>
+
+          <div className="skill-card glass">
+            <div className="skill-header">
+              <i className="bi bi-tools"></i>
+
+              <h3>Tools</h3>
+            </div>
+
+            <div className="tech-list">
+              <span>Git</span>
+              <span>GitHub</span>
+              <span>VS Code</span>
+              <span>Postman</span>
+              <span>XAMPP</span>
+              <span>phpMyAdmin</span>
+              <span>Microsoft Office</span>
+              <span>Figma</span>
+              <span>Canva</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
   );
-};
+}
 
 export default Skills;

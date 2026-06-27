@@ -1,43 +1,104 @@
-import React from 'react';
+import "../styles/hero.css";
+import profile from "../assets/images/id-pic2.png";
+import { TypeAnimation } from "react-type-animation";
 
-const Hero = () => {
+function Hero() {
   return (
-    <section id="home" className="min-vh-100 d-flex align-items-center pt-5">
-      <div className="container mt-5">
-        <div className="row align-items-center g-5">
-          <div className="col-lg-7 order-2 order-lg-1">
-            <span className="badge bg-white text-dark shadow-sm rounded-pill px-3 py-2 mb-4 border fw-medium d-inline-flex align-items-center gap-2">
-              <i className="bi bi-stars text-warning"></i> Available for Full-Time Roles
-            </span>
-            <h1 className="display-3 fw-bolder mb-3 line-height-sm">
-              Building digital <br />
-              systems with <span className="text-gradient">precision.</span>
+    <section id="home" className="hero">
+      <div className="container-custom">
+        <div className="hero-wrapper">
+          <div className="hero-content fade-up">
+            <span className="hero-subtitle">WELCOME TO MY PORTFOLIO</span>
+
+            <h1>
+              Hi, I'm <span className="gradient-text">Jessa Cariñaga</span>
             </h1>
-            <h2 className="h4 text-muted fw-normal mb-4">
-              Hi, I'm Jessa V. Cariñaga[cite: 1] — A Full-Stack Web Developer based in Laguna[cite: 1].
-            </h2>
-            <p className="lead text-muted mb-5 pe-lg-5" style={{ fontSize: '1.1rem' }}>
-              I specialize in robust data management, secure REST API integrations, and crafting responsive user interfaces ensuring zero entry errors under tight deadlines[cite: 1].
+
+            <div className="typing-text">
+              <TypeAnimation
+                sequence={[
+                  "Frontend Developer",
+                  2000,
+                  "Full Stack Developer",
+                  2000,
+                  "IT Graduate",
+                  2000,
+                ]}
+                speed={45}
+                repeat={Infinity}
+              />
+            </div>
+
+            <p>
+              Information Technology graduate passionate about building modern,
+              responsive, and user-focused web applications. I enjoy
+              transforming ideas into clean, scalable solutions while
+              continuously learning new technologies to create better digital
+              experiences.
             </p>
-            <div className="d-flex flex-wrap gap-4 align-items-center">
-              <a href="#projects" className="btn btn-gradient text-decoration-none">Explore My Work</a>
-              <a href="#contact" className="text-dark fw-bold text-decoration-none d-flex align-items-center gap-2">
-                Let's Talk <i className="bi bi-arrow-right"></i>
+
+            <div className="hero-buttons">
+              <a href="#projects" className="primary-btn">
+                <i className="bi bi-grid"></i>
+                View Projects
+              </a>
+
+              <a href="/resume.pdf" download className="secondary-btn">
+                <i className="bi bi-download"></i>
+                Download Resume
+              </a>
+            </div>
+
+            <div className="hero-socials">
+              <a href="https://github.com/esang222" target="_blank">
+                <i className="bi bi-github"></i>
+              </a>
+
+              <a href="https://www.linkedin.com/in/jessa-carinaga/" target="_blank">
+                <i className="bi bi-linkedin"></i>
+              </a>
+
+              <a href="mailto:carinagajessa18@gmail.com">
+                <i className="bi bi-envelope-fill"></i>
               </a>
             </div>
           </div>
-          <div className="col-lg-5 order-1 order-lg-2 text-center">
-            {/* Replace this div with an actual <img> tag of yourself */}
-            <div className="premium-card p-2 shadow-lg mx-auto" style={{ maxWidth: '400px', aspectRatio: '4/5' }}>
-              <div className="w-100 h-100 rounded-4 d-flex align-items-center justify-content-center" style={{ background: '#e2e8f0' }}>
-                <i className="bi bi-person-bounding-box display-1 text-muted"></i>
-              </div>
+
+          <div className="hero-image fade-up">
+            <div className="profile-card">
+              <img src={profile} alt="Jessa Cariñaga" />
             </div>
+          </div>
+        </div>
+
+        <div className="hero-stats">
+          <div className="glass stat-box">
+            <h2>2+</h2>
+
+            <span>Major Projects</span>
+          </div>
+
+          <div className="glass stat-box">
+            <h2>3</h2>
+
+            <span>Certifications</span>
+          </div>
+
+          <div className="glass stat-box">
+            <h2>1</h2>
+
+            <span>Internship</span>
+          </div>
+
+          <div className="glass stat-box">
+            <h2>2026</h2>
+
+            <span>IT Graduate</span>
           </div>
         </div>
       </div>
     </section>
   );
-};
+}
 
 export default Hero;

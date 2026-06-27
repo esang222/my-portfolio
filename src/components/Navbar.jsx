@@ -1,25 +1,121 @@
-import React from 'react';
+import { useEffect, useState } from "react";
+import "../styles/navbar.css";
 
-const Navbar = () => {
+function Navbar() {
+  const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 30);
+
+      const sections = document.querySelectorAll("section");
+
+      sections.forEach((section) => {
+        const top = section.offsetTop - 120;
+        const height = section.offsetHeight;
+
+        if (window.scrollY >= top && window.scrollY < top + height) {
+          setActiveSection(section.id);
+        }
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const closeMenu = () => setMenuOpen(false);
+
   return (
-    <nav className="navbar navbar-expand-lg fixed-top" style={{ background: 'rgba(250, 249, 249, 0.8)', backdropFilter: 'blur(10px)' }}>
-      <div className="container py-2">
-        <a className="navbar-brand fw-bolder fs-4" href="#home">JVC<span className="text-gradient">.</span></a>
-        <button className="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navLinks">
-          <i className="bi bi-grid-3x3-gap-fill fs-2 text-dark"></i>
-        </button>
-        <div className="collapse navbar-collapse" id="navLinks">
-          <ul className="navbar-nav ms-auto gap-3 fw-semibold">
-            <li className="nav-item"><a className="nav-link text-dark" href="#about">About</a></li>
-            <li className="nav-item"><a className="nav-link text-dark" href="#skills">Skills</a></li>
-            <li className="nav-item"><a className="nav-link text-dark" href="#experience">Experience</a></li>
-            <li className="nav-item"><a className="nav-link text-dark" href="#projects">Work</a></li>
-            <li className="nav-item"><a className="nav-link text-dark" href="#contact">Contact</a></li>
+    <header className={`navbar-wrapper ${scrolled ? "scrolled" : ""}`}>
+      <div className="container-custom">
+        <nav className="portfolio-navbar">
+          <a href="#home" className="logo">
+            JC
+          </a>
+
+          <ul className={menuOpen ? "nav-links active" : "nav-links"}>
+            <li>
+              <a
+                href="#home"
+                className={activeSection === "home" ? "active" : ""}
+                onClick={closeMenu}>
+                Home
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#about"
+                className={activeSection === "about" ? "active" : ""}
+                onClick={closeMenu}>
+                About
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#skills"
+                className={activeSection === "skills" ? "active" : ""}
+                onClick={closeMenu}>
+                Skills
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#experience"
+                className={activeSection === "experience" ? "active" : ""}
+                onClick={closeMenu}>
+                Experience
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#projects"
+                className={activeSection === "projects" ? "active" : ""}
+                onClick={closeMenu}>
+                Projects
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#certifications"
+                className={activeSection === "certifications" ? "active" : ""}
+                onClick={closeMenu}>
+                Certifications
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#contact"
+                className={activeSection === "contact" ? "active" : ""}
+                onClick={closeMenu}>
+                Contact
+              </a>
+            </li>
           </ul>
-        </div>
+
+          <div className="navbar-actions">
+            <a href="/src/assets/J. Cariñaga - Resume.pdf" className="resume-btn" download>
+              <i className="bi bi-download"></i>
+              Resume
+            </a>
+
+            <button className="menu-btn" onClick={() => setMenuOpen(!menuOpen)}>
+              <i className={`bi ${menuOpen ? "bi-x-lg" : "bi-list"}`}></i>
+            </button>
+          </div>
+        </nav>
       </div>
-    </nav>
+    </header>
   );
-};
+}
 
 export default Navbar;
